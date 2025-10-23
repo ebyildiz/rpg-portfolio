@@ -30,7 +30,7 @@ export default function Home() {
       {typed.map((line, i) => (
         <h1 className={jersey10.className + " text-[50px]"} key={i}>{line}</h1>
       ))}
-      {done && <button className={jersey10.className + " pixel-btn"} onClick={}>Start Journey</button>}
+      {done && <button className={jersey10.className + " pixel-btn"} >Start Journey</button>}
     </div>
   );
 }
