@@ -25,7 +25,6 @@ export default function useChainedTypewriter(
       if (!currentMessage) return;
 
       if (charIndex.current < currentMessage.length) {
-        // add one character to the current line
         const nextChar = currentMessage.charAt(charIndex.current);
         setOutput((prev) => {
           const copy = [...prev];
@@ -38,18 +37,16 @@ export default function useChainedTypewriter(
         
         timeoutRef.current = setTimeout(type, speed);
       } else {
-        // finished current message
         if (messageIndex.current=== messages.length-1){
-          await delay(200);
+          await delay(400);
           onLoopDone();
         }
         if (messageIndex.current < messages.length - 1) {
-          // ✅ wait for the pause BEFORE adding a new empty line
           timeoutRef.current = setTimeout(() => {
             messageIndex.current++;
             charIndex.current = 0;
-            setOutput((prev) => [...prev, ""]); // add the new line *after* the pause
-            type(); // start typing next line
+            setOutput((prev) => [...prev, ""]); 
+            type(); 
           }, pauseBetween);
         }
       }
@@ -61,7 +58,7 @@ export default function useChainedTypewriter(
       isCancelled = true;
       if (timeoutRef.current) clearTimeout(timeoutRef.current);
     };
-  }, [messages, onLoopDone, pauseBetween, speed]);
+  }, []);
 
   return output;
 }

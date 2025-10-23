@@ -5,6 +5,7 @@ import Image from "next/image";
 import front from "@/images/front.png"
 import jump from "@/images/jump.png"
 import { useEffect, useState } from "react";
+import Link from "next/link"
 
 
 export default function Home() {
@@ -30,7 +31,7 @@ export default function Home() {
       {typed.map((line, i) => (
         <h1 className={jersey10.className + " text-[50px]"} key={i}>{line}</h1>
       ))}
-      {done && <button className={jersey10.className + " pixel-btn"} >Start Journey</button>}
+      {done && <Link href="/mycharacter"><button className={jersey10.className + " pixel-btn"} >Start Journey</button></Link>}
     </div>
   );
 }

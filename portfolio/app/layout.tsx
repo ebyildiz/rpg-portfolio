@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { jersey10 } from "./ui/font";
 import "./globals.css";
+import Transition from "./Transition"
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,7 +18,10 @@ export default function RootLayout({
       <body
         className={`${jersey10.className} antialiased`}
       >
+        <Transition>
         {children}
+        </Transition>
+       
       </body>
     </html>
   );
