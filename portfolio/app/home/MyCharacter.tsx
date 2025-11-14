@@ -47,7 +47,7 @@ export default function MyCharacter() {
 
     return (
         <>
-        <section className="grid sm:grid-cols-1 lg:grid-cols-2 place-items-center p-30">
+        <section className="grid sm:grid-cols-1 lg:grid-cols-2 place-items-center px-20">
             <div className="flex flex-row gap-0">
                 <button className="cursor-pointer mr-[-70px]" onClick={turnLeft}>
                     <Image src={turnL} alt="turn left image" width={128} height={128} />

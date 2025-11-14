@@ -1,17 +1,19 @@
 'use client'
-import Link from "next/link"
 import { updateHash } from "@/helpers/updateHash"
 import { HashContext } from "./HashProvider"
 import { useContext } from "react"
-import { link } from "fs"
 export default function SmoothLink({
-    href,
     children,
     linkHash,
+    styling = 'cursor-pointer max-h-max mt-[10] rounded-[20px] px-3 py-1',
+    whenHovered = "hover:bg-[#40223f]",
+    whenActive = "bg-[#FF91FA] text-[black]"
 }: {
-    href: string
     children: React.ReactNode
     linkHash: string
+    styling?: string
+    whenHovered?:string
+    whenActive?:string
 }) {
 
     const { hash, setHash } = useContext(HashContext);
@@ -26,7 +28,7 @@ export default function SmoothLink({
     };
 
     return (
-        <button onClick={() => handleClick(linkHash)} className={'cursor-pointer max-h-max mt-[10] rounded-[20px] px-3 py-1 ' + (linkHash === hash ? " bg-[#FF91FA] text-[black]" : " hover:bg-[#40223f]")} >
+        <button onClick={() => handleClick(linkHash)} className={`${styling} ${(linkHash === hash ? whenActive : whenHovered)}`} >
             {children}
         </button>
     )

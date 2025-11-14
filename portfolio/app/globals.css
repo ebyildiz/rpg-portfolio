@@ -140,3 +140,78 @@ header {
 header.is-sticky {
   transform: translateY(0); /* Animate the header into view */
 }
+
+.gradient-button {
+  /* Basic button styling */
+  padding: 10px 40px;
+  border: none;
+  border-radius: 30px;
+  width: 200px;
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+  overflow: hidden; /* Important for containing the moving background */
+  
+
+  /* Gradient background setup */
+  background: linear-gradient(to right, #9dcdf1, #b052eb, #3576ef, #91eae4); /* Your gradient colors */
+  background-size: 200% auto; /* Make the background larger than the button */
+  background-position: left center; /* Initial position of the background */
+  transition: background-position 0.5s ease-out; /* Smooth transition for the background movement */
+}
+
+.gradient-button:hover {
+  background-position: right center; /* Move the background to the right on hover */
+}
+
+.exp-button {
+  padding: 10px 40px;
+  border: none;
+  border-radius: 30px;
+  width: 200px;
+  cursor: pointer;
+  color: white;
+  font-size: 25px;
+  background-color: #65b1eb;
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: transform 0.3s ease;
+}
+
+/* Make text move too */
+.exp-button span {
+  transition: transform 0.3s ease;
+}
+
+/* --- 2 Chevron arrows (NOT 3) --- */
+.exp-button {
+  background-image:
+    url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 20' stroke='white' stroke-width='3' fill='none'><polyline points='2,2 10,10 2,18'/></svg>"),
+    url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 20' stroke='white' stroke-width='3' fill='none'><polyline points='2,2 10,10 2,18'/></svg>");
+
+  background-repeat: no-repeat;
+  background-size: 24px 80%;  /* width 24, height 80% of button */
+
+  background-position:
+    -6px 50%,              /* left arrow (slightly overflowing) */
+    calc(20% - 20px) 50%;  /* second arrow inside button */
+  
+  transition: 0.3s ease;
+}
+
+/* --- Hover Animation: move BOTH arrows + text right --- */
+.exp-button:hover {
+  padding-left: 70px;
+  background-position:
+    calc(-6px + 15px) 50%,             /* arrow 1 shifted */
+    calc(20% - 20px + 15px) 50%;       /* arrow 2 shifted */
+}
+
+.exp-button:hover span {
+  transform: translateX(15px);
+}

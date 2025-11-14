@@ -43,17 +43,20 @@ export default function Header() {
     }, []);
 
     return (
+        <div className="hidden lg:block">
+
         <header ref={headerRef}
             className={`sticky top-10 header-base mx-auto flex flex-row justify-center items-center
       rounded-[20px] w-[1000px] z-50 gap-17 text-[25px]
       bg-[#0a0a0a]/80 backdrop-blur-md h-[70px]`}
         >
-            <SmoothLink href="/home#mycharacter" linkHash="mycharacter">My Character</SmoothLink>
-            <SmoothLink href="/home#skills" linkHash="skills">Skills</SmoothLink>
-            <SmoothLink href="/home#career" linkHash="career">Career Journey</SmoothLink>
-            <SmoothLink href="/home#certificates" linkHash="certificates">Certificates</SmoothLink>
-            <SmoothLink href="/home#projects" linkHash="project">Project Journey</SmoothLink>
+            <SmoothLink linkHash="mycharacter">My Character</SmoothLink>
+            <SmoothLink linkHash="skills">Skills</SmoothLink>
+            <SmoothLink linkHash="career">Career Journey</SmoothLink>
+            <SmoothLink linkHash="certificates">Certificates</SmoothLink>
+            <SmoothLink linkHash="project">Project Journey</SmoothLink>
         </header>
+        </div>
     );
 }
 
