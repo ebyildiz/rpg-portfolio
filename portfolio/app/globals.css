@@ -20,14 +20,20 @@
 }
 
 body {
+  
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
   height: 100%;
+  margin: 0;
 }
 
 html{
   height: 100%;
+}
+
+.target-section {
+  scroll-margin-top: 120px; /* Adjust based on your header's height */
 }
 
 .image-render-pixel {
@@ -56,4 +62,81 @@ html{
     inset -4px -4px 0 rgba(132, 127, 127, 0.2),
     inset 4px 4px 0 rgba(0, 0, 0, 0.4);
   transform: translate(4px, 4px);
+}
+
+
+.skillsButton {
+  font-size: 20px;
+  margin-bottom: 2.5rem; /* mb-10 */
+  margin-top: 2.5rem; /* mt-10 */
+  cursor: pointer;
+  padding-top: 0.5rem; /* py-2 */
+  padding-bottom: 0.5rem;
+  padding-left: 2.5rem; /* px-10 */
+  padding-right: 2.5rem;
+  border-radius: 10px;
+  border-width: 1px; /* border-1 */
+  border-color: #FFFFFF; /* border-color-[#FFFFFF] */
+  transition: all 0.2s ease; /* transition-all */
+}
+
+.skillsButton:hover {
+  margin: 10px; /* hover:m-[10px] */
+  font-size: 21px; /* hover:text-[21px] */
+}
+
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(50px); /* Optional: slide up from 50px below */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-element {
+  animation: fade-in-up linear forwards; /* 'linear' for smooth progress, 'forwards' to maintain end state */
+  animation-timeline: view(); /* Link animation to view progress */
+  animation-range: entry 0% cover 45%; /* Start when 0% of element enters, end when 50% of element covers viewport */
+}
+
+@keyframes pop-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.1); /* Starts very small */
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.1); /* Briefly scales slightly larger than its final size */
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1); /* Ends at its normal size */
+  }
+}
+
+.popup-element {
+  animation: pop-in 0.3s ease-out forwards;
+  /* Other styles for your pop-up, e.g., position, background, etc. */
+}
+
+.popup-visible {
+  animation: pop-in 0.8s ease-out forwards;
+}
+
+.popup-invisible {
+  opacity:0%
+}
+
+
+header {
+  transition: transform 0.8s ease-out; /* Smooth transition for the effect */
+  transform: translateY(-90%);
+}
+
+header.is-sticky {
+  transform: translateY(0); /* Animate the header into view */
 }

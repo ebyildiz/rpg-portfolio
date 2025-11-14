@@ -1,5 +1,4 @@
-// components/Transition.js
-"use client";
+'use client'
 import { motion, AnimatePresence } from "framer-motion";
 
 const Transition = ({ children }) => {

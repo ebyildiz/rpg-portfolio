@@ -19,8 +19,8 @@ export default function Home() {
     return () => clearInterval(interval)
   }, [])
 
-  const first = "hi. my name is elif."
-  const second = "help me become a frontend developer."
+  const first = "Hi! my name is Elif."
+  const second = "Help me become a frontend developer :)"
 
   const typed = useChainedTypeWriter([first, second], 80, 500, ()=>{setDone(true)})
 
@@ -31,7 +31,7 @@ export default function Home() {
       {typed.map((line, i) => (
         <h1 className={jersey10.className + " text-[50px]"} key={i}>{line}</h1>
       ))}
-      {done && <Link href="/mycharacter"><button className={jersey10.className + " pixel-btn"} >Start Journey</button></Link>}
+      {done && <Link href="/home"><button className={jersey10.className + " pixel-btn"} >Start Journey</button></Link>}
     </div>
   );
 }

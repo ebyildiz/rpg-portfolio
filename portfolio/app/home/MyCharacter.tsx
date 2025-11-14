@@ -46,7 +46,8 @@ export default function MyCharacter() {
     }
 
     return (
-        <section className="grid grid-cols-2 place-items-center p-30">
+        <>
+        <section className="grid sm:grid-cols-1 lg:grid-cols-2 place-items-center p-30">
             <div className="flex flex-row gap-0">
                 <button className="cursor-pointer mr-[-70px]" onClick={turnLeft}>
                     <Image src={turnL} alt="turn left image" width={128} height={128} />
@@ -57,20 +58,10 @@ export default function MyCharacter() {
                 </button>
             </div>
             <div className="flex flex-col">
-                <h1 className="text-[30px] underline underline-offset-10 mb-[10]">About Elif</h1>
-                <p>This is Elif Yildiz and she has recently graduated from UCSD with a degree in Math and Computer Science. The past couple of months, she has been learning front end development through Scrimba and making various projects that help her learn and grow even more. She has just finished her latest project MyCuteChat, and she is currently learning Rust (questioning her life choices). She enjoys web development and is always willing to learn new things! In her free time, Elif climbs, plays games, and plays the bass. </p>
-                <h1 className="text-[30px] underline underline-offset-10 mb-[10]">Skills</h1>
-                <ul>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>Tailwind CSS</li>
-                    <li>Javascript</li>
-                    <li>TypeScript</li>
-                    <li>React</li>
-                    <li>ReactNative</li>
-                    <li>Javascript</li>
-                </ul>
+                <h1 className="text-[40px] underline underline-offset-10 mb-[10]">About Me</h1>
+                <p className="text-[20px]">This is Elif Yildiz and she has recently graduated from UCSD with a degree in Math and Computer Science. The past couple of months, she has been learning front end development through Scrimba and making various projects that help her learn and grow even more. She has just finished her latest project MyCuteChat, and she is currently learning Rust (questioning her life choices). She enjoys web development and is always willing to learn new things! In her free time, Elif climbs, plays games, and plays the bass. </p>
             </div>
         </section>
+        </>
     )
 }
