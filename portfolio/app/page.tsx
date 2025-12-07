@@ -27,9 +27,13 @@ export default function Home() {
   return (
 
     <div className="flex flex-col place-items-center h-full p-30">
-      <Image src={images[imgIndex]} className="w-64 h-64 image-render-pixel" alt="front image of my character" width={256} height={256}/>
+      {imgIndex === 0 ? 
+        <Image src={images[imgIndex]} className="object-contain w-[118px] h-[280px] image-render-pixel" alt="front image of my character" width={80} height={161}/>
+        :
+        <Image src={images[imgIndex]} className="object-contain w-[150px] h-[280px] image-render-pixel" alt="front image of my character" width={118} height={197}/>
+      }
       {typed.map((line, i) => (
-        <h1 className={jersey10.className + " text-[50px]"} key={i}>{line}</h1>
+        <h1 className={jersey10.className + " text-[30px] text-center md:text-[50px]"} key={i}>{line}</h1>
       ))}
       {done && <Link href="/home"><button className={jersey10.className + " pixel-btn"} >Start Journey</button></Link>}
     </div>

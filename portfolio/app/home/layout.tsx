@@ -3,6 +3,7 @@ import Transition from '../Transition';
 import Header from "./Header"
 import { HashProvider } from './HashProvider';
 import DotGrid from './DotGrid';
+import Footer from './Footer';
 
 
 export default function CharacterLayout({ children }:
@@ -31,6 +32,7 @@ export default function CharacterLayout({ children }:
                 <Transition>
                     {children}
                 </Transition>
+                <Footer/>
             </main>
 
         </HashProvider>)

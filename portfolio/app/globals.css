@@ -72,8 +72,6 @@ html{
   cursor: pointer;
   padding-top: 0.5rem; /* py-2 */
   padding-bottom: 0.5rem;
-  padding-left: 2.5rem; /* px-10 */
-  padding-right: 2.5rem;
   border-radius: 10px;
   border-width: 1px; /* border-1 */
   border-color: #FFFFFF; /* border-color-[#FFFFFF] */
@@ -100,7 +98,7 @@ html{
 .fade-element {
   animation: fade-in-up linear forwards; /* 'linear' for smooth progress, 'forwards' to maintain end state */
   animation-timeline: view(); /* Link animation to view progress */
-  animation-range: entry 0% cover 45%; /* Start when 0% of element enters, end when 50% of element covers viewport */
+  animation-range: entry 0% cover 36%; /* Start when 0% of element enters, end when 50% of element covers viewport */
 }
 
 @keyframes pop-in {
@@ -138,7 +136,7 @@ header {
 }
 
 header.is-sticky {
-  transform: translateY(0); /* Animate the header into view */
+  transform: translateY(-30%); /* Animate the header into view */
 }
 
 .gradient-button {
@@ -146,7 +144,6 @@ header.is-sticky {
   padding: 10px 40px;
   border: none;
   border-radius: 30px;
-  width: 200px;
   color: white;
   font-size: 25px;
   cursor: pointer;
@@ -168,7 +165,6 @@ header.is-sticky {
   padding: 10px 40px;
   border: none;
   border-radius: 30px;
-  width: 200px;
   cursor: pointer;
   color: white;
   font-size: 25px;
@@ -214,4 +210,22 @@ header.is-sticky {
 
 .exp-button:hover span {
   transform: translateX(15px);
+}
+
+.text-glow {
+  background: linear-gradient(
+    90deg,
+    #ff91fa 0%,
+    #ffffff 50%,
+    #ff91fa 100%
+  );
+  background-size: 200% 100%;
+  animation: glowSweep 5s linear infinite;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+@keyframes glowSweep {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
 }

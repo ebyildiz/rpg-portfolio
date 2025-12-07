@@ -46,15 +46,16 @@ export default function Header() {
         <div className="hidden lg:block">
 
         <header ref={headerRef}
-            className={`sticky top-10 header-base mx-auto flex flex-row justify-center items-center
-      rounded-[20px] w-[1000px] z-50 gap-17 text-[25px]
+            className={`fixed top-15 left-[50%] -translate-x-1/2 header-base mx-auto flex flex-row justify-center items-center
+      rounded-[20px] w-[1200px] z-50 gap-17 text-[25px]
       bg-[#0a0a0a]/80 backdrop-blur-md h-[70px]`}
         >
             <SmoothLink linkHash="mycharacter">My Character</SmoothLink>
             <SmoothLink linkHash="skills">Skills</SmoothLink>
-            <SmoothLink linkHash="career">Career Journey</SmoothLink>
+            <SmoothLink linkHash="career">Experience</SmoothLink>
             <SmoothLink linkHash="certificates">Certificates</SmoothLink>
-            <SmoothLink linkHash="project">Project Journey</SmoothLink>
+            <SmoothLink linkHash="projects">Project Journey</SmoothLink>
+            <SmoothLink linkHash="contactme">Contact Me</SmoothLink>
         </header>
         </div>
     );

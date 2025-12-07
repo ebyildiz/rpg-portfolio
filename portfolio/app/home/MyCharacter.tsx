@@ -47,19 +47,19 @@ export default function MyCharacter() {
 
     return (
         <>
-        <section className="grid sm:grid-cols-1 lg:grid-cols-2 place-items-center px-20">
-            <div className="flex flex-row gap-0">
-                <button className="cursor-pointer mr-[-70px]" onClick={turnLeft}>
-                    <Image src={turnL} alt="turn left image" width={128} height={128} />
+        <section className="grid sm:grid-cols-1 lg:grid-cols-2 place-items-center px-10 md:px-20 md:pt-[50px]">
+            <div className="flex flex-row place-center gap-8 p-8 md:gap-15 md:p-15">
+                <button className="cursor-pointer " onClick={turnLeft}>
+                    <Image className="object-contain w-[100px] h-[80px] md:w-[70px]" src={turnL} alt="turn left image" width={70} height={60} />
                 </button>
-                <Image src={images[imageIdx]} alt="character image" width={400} height={400} />
-                <button className="cursor-pointer ml-[-80px]" onClick={turnRight}>
-                    <Image src={turnR} alt="turn right image" width={128} height={128} />
+                <Image className="object-contain w-[200px] h-[200px] md:w-[160px] md:h-[300px]" src={images[imageIdx]} alt="character image" width={150} height={200} />
+                <button className="cursor-pointer" onClick={turnRight}>
+                    <Image className="object-contain w-[100px] h-[80px] md:w-[70px]" src={turnR} alt="turn right image" width={70} height={60} />
                 </button>
             </div>
             <div className="flex flex-col">
-                <h1 className="text-[40px] underline underline-offset-10 mb-[10]">About Me</h1>
-                <p className="text-[20px]">This is Elif Yildiz and she has recently graduated from UCSD with a degree in Math and Computer Science. The past couple of months, she has been learning front end development through Scrimba and making various projects that help her learn and grow even more. She has just finished her latest project MyCuteChat, and she is currently learning Rust (questioning her life choices). She enjoys web development and is always willing to learn new things! In her free time, Elif climbs, plays games, and plays the bass. </p>
+                <h1 className="text-center text-[30px] md:text-[40px] underline underline-offset-10 mb-[10]">About Me</h1>
+                <p className="text-center text-[20px]  p-5 md:w-[750px]">This is Elif Yildiz and she has recently graduated from UCSD with a degree in Math and Computer Science. Since she graduated, she has been improving her software engineering skills through Scrimba and making various projects that help her learn and grow even more. She finished her latest project MyCuteChat in September, and she is currently working on finishing up the mobile app for TilkieTalkie . She enjoys web/mobile development and is always willing to learn new things! In her free time, Elif rock climbs, plays games on her PS5, and plays the bass. </p>
             </div>
         </section>
         </>
