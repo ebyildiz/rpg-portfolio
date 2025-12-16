@@ -30,7 +30,7 @@ export default function Certificates() {
         <section className="flex flex-col place-items-center gap-10 px-10 md:pt-[100px] md:px-20 pb-20">
             <h1 className="text-[40px] underline underline-offset-10 mb-[30px]">Certificates</h1>
 
-            <div ref={ref} className="grid sm:grid-cols-1 md:grid-cols-3 md:gap-20 place-items-center">
+            <div ref={ref} className="grid grid-cols-2 md:grid-cols-3 gap-10 md:gap-20 place-items-center">
                 {IMAGES.map((img, i) => (
                     <Image
                         key={i}
@@ -39,7 +39,7 @@ export default function Certificates() {
                         width={300}
                         height={200}
                         onClick={() => setSelectedImage(img.src)}
-                        className={`${inView ? "popup-visible" : "popup-invisible"}
+                        className={`${inView ? "popup-visible " : "popup-invisible"}
                                     cursor-zoom-in rounded-md transition-all`}
                     />
                 ))}

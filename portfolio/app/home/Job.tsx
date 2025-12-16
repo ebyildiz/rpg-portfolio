@@ -47,26 +47,26 @@ export default function Job({
       variants={slideVariants}
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
-      className="flex flex-row place-items-center mb-10 px-5 md:px-20"
+      className="flex flex-row place-items-center w-[100%] md:w-[1000px] lg-[1500px] mb-10 px-5 md:px-20"
     >
       {linePos === "left" && <LongLine />}
 
-      <div className="flex flex-col place-items-center bg-[#ded9d9] rounded-[10px] p-2 md:p-10">
-        <Image className="mx-5 md:mx-15 md:mb-5 rounded-md"
+      <div className="flex flex-col w-[500px] md:w-[200px] place-items-center bg-[#ded9d9] rounded-[10px] p-2 p-5 md:p-10">
+        <Image className="mx-5 md:mx-15 md:mb-5 w-[90px] rounded-md"
                src={picture}
                alt={company}
                width={100}
                height={100}
         />
-        <h1 className="text-black md:text-[20px] text-center">{company}</h1>
+        <h1 className="text-black text-[18px] text-center">{company}</h1>
       </div>
 
-      <div className="flex flex-col place-items-center bg-gray-900 md:p-5 rounded-r-md">
+      <div className="flex flex-col place-items-center bg-gray-900 p-3  rounded-r-md">
         <div className="flex flex-col place-items-center mb-3">
-          <h2 className="text-center">{position}</h2>
-          <p>{DateBegin} - {DateEnd}</p>
+          <h2 className="text-center text-[25px]">{position}</h2>
+          <p className="">{DateBegin} - {DateEnd}</p>
         </div>
-        <p className="text-center md:w-80 md:text-[15px]">{description}</p>
+        <p className="text-center md:w-80 ">{description}</p>
       </div>
 
       {linePos === "right" && <LongLine />}

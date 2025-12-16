@@ -6,7 +6,7 @@ import halloween from "@/images/projects/halloween.png"
 
 export default function Projects() {
     return (
-        <section className="flex flex-col place-items-center gap-10 px-10 md:pt-[100px] md:px-20 pb-20">
+        <section className="flex flex-col place-items-center gap-10 px-5 w-[430px] md:w-[1500px] md:pt-[100px] md:px-20 pb-20 hidden">
 
             <h1 className="text-[40px] underline underline-offset-10 mb-[30px]">Projects</h1>
 

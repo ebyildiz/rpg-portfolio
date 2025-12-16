@@ -14,7 +14,7 @@ export default function Footer() {
     const [linkedinHover, setLinkedinHover] = React.useState(false);
 
     return (
-        <footer className="flex flex-col place-items-center bg-[#40223f] text-white md:py-7">
+        <footer className="flex flex-col place-items-center bg-[#40223f] text-white py-3 md:py-7 ">
             <div className="text-center">
                 <p className="text-[20px]">
                     &copy; 2025. All rights reserved.
@@ -25,13 +25,13 @@ export default function Footer() {
             </div>
             <div className="flex flex-row place-items-center gap-6">
             <Link href="https://github.com/ebyildiz" target="_blank" rel="noopener noreferrer" onMouseEnter={()=> setGithubHover(true)} onMouseLeave={() => setGithubHover(false)}>
-                {githubHover ?  <FaGithub size={30} className="mt-4 cursor-pointer" /> :<VscGithub size={30} className="mt-4 cursor-pointer" />}
+                {githubHover ?  <FaGithub size={35} className="mt-4 cursor-pointer" /> :<VscGithub size={35} className="mt-4 cursor-pointer" />}
             </Link>
             <Link href="mailto:elifyildjz@gmail.com" target="_blank" rel="noopener noreferrer" onMouseEnter={()=> setGmailHover(true)} onMouseLeave={() => setGmailHover(false)}>
-                {gmailHover ? <ImGoogle size={30} className="mt-4 cursor-pointer" /> : <SlSocialGoogle size={30} className="mt-4 cursor-pointer" />}
+                {gmailHover ? <ImGoogle size={33} className="mt-4 cursor-pointer" /> : <SlSocialGoogle size={33} className="mt-4 cursor-pointer" />}
             </Link>
             <Link href="https://linkedin.com/in/ebyildiz" target="_blank" rel="noopener noreferrer" onMouseEnter={()=> setLinkedinHover(true)} onMouseLeave={() => setLinkedinHover(false)}>
-                {linkedinHover ? <PiLinkedinLogoFill size={40} className="mt-4 cursor-pointer" /> : <PiLinkedinLogoLight size={40} className="mt-4 cursor-pointer" />}
+                {linkedinHover ? <PiLinkedinLogoFill size={40.5} className="mt-4 cursor-pointer" /> : <PiLinkedinLogoLight size={40.5} className="mt-4 cursor-pointer" />}
             </Link>
             </div>
         </footer>

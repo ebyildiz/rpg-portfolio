@@ -31,20 +31,20 @@ export default function Skills() {
     });
 
     return (
-        <section className="min-w-screen p-[40px] flex flex-col place-items-center ">
+        <section className="min-w-screen p-[40px] w-[350px] flex flex-col place-items-center ">
             <h1 className="text-[40px] underline underline-offset-10 mb-[10]">Skills</h1>
             <div className="flex flex-row place-items-center gap-[50] h-[130px]">
                 <Line />
-                <button className={`skillsButton px-5 md:px-10 ${selected === "frontend" ? "bg-[#FFFFFF] text-[#000000]" : "bg-[#000000]"}`} onClick={() => setSelected("frontend")}>frontend</button>
+                <button className={`skillsButton px-1 md:px-10 ${selected === "frontend" ? "bg-[#FFFFFF] text-[#000000]" : "bg-[#000000]"}`} onClick={() => setSelected("frontend")}><span className="text-[15px] md:text-[20px]">frontend</span></button>
                 <Line />
-                <button className={`skillsButton px-5 md:px-10 ${selected === "backend" ? "bg-[#FFFFFF] text-[#000000]" : "bg-[#000000]"}`} onClick={() => setSelected("backend")}>backend</button>
+                <button className={`skillsButton px-1 md:px-10 ${selected === "backend" ? "bg-[#FFFFFF] text-[#000000]" : "bg-[#000000]"}`} onClick={() => setSelected("backend")}><span className="text-[15px] md:text-[20px]">backend</span></button>
                 <Line />
-                <button className={`skillsButton px-5 md:px-10 ${selected === "technologies" ? "bg-[#FFFFFF] text-[#000000]" : "bg-[#000000]"}`} onClick={() => setSelected("technologies")}>technologies</button>
+                <button className={`skillsButton px-1 md:px-10 ${selected === "technologies" ? "bg-[#FFFFFF] text-[#000000]" : "bg-[#000000]"}`} onClick={() => setSelected("technologies")}><span className="text-[15px] md:text-[20px]">technologies</span></button>
                 <Line />
             </div>
 
 
-            <div ref={ref} className="relative rounded-[400px] w-[400px] h-[400px] p-10 bg-[#878383] md:w-[650px] lg:w-[650px] shadow-[0_50px_200px_rgba(0,0,0,0.9),_inset_0_0_200px_rgba(0,0,0,0.95)]" key={selected}>
+            <div ref={ref} className="relative rounded-[400px] w-[350px] h-[400px] p-10 bg-[#878383] md:w-[650px] shadow-[0_50px_200px_rgba(0,0,0,0.9),_inset_0_0_200px_rgba(0,0,0,0.95)]" key={selected}>
                 {
                     selected === "frontend" ?
                         <>
@@ -56,7 +56,7 @@ export default function Skills() {
 
                             <Logo classN={`${inView ? "popup-visible w-[100px] md:w-[120px]" : "popup-invisible"}`} txt="typescript" pos="top-[160px] left-[150px] md:top-[200px] md:left-[245px] popup-element" ><Image src={typescript} width={120} height={100} alt="typescript logo" /></Logo>
 
-                            <Logo classN={`${inView ? "popup-visible w-[100px] md:w-[120px]" : "popup-invisible"}`} txt="react" pos="top-[150px] left-[270] md:top-[40px] md:left-[260] popup-element" ><Image src={react} width={120} height={150} alt="react logo" /></Logo>
+                            <Logo classN={`${inView ? "popup-visible w-[100px] md:w-[120px]" : "popup-invisible"}`} txt="react" pos="top-[150px] left-[250] md:top-[40px] md:left-[260] popup-element" ><Image src={react} width={120} height={150} alt="react logo" /></Logo>
 
                             <Logo classN={`${inView ? "popup-visible w-[200px] md:w-[250px]" : "popup-invisible"}`} txt="tailwind css" pos="top-[220px] left-[100px] md:top-[280px] md:left-[230px] popup-element" ><Image src={tailwindLight} width={170} height={50} alt="tailwind logo" /></Logo>
 
@@ -68,12 +68,12 @@ export default function Skills() {
                         (
                             selected === "technologies" ?
                                 <>
-                                <Logo classN={`${inView ? "popup-visible w-[70px] md:w-[90px]" : "popup-invisible"}`} txt="firebase" pos="top-[50px] left-[100px] md:top-[40px] md:left-[280px] popup-element" ><Image src={firebase} width={130} height={50} alt="firebase logo" /></Logo>
+                                <Logo classN={`${inView ? "popup-visible w-[70px] md:w-[90px]" : "popup-invisible"}`} txt="firebase" pos="top-[50px] left-[80px] md:top-[40px] md:left-[280px] popup-element" ><Image src={firebase} width={130} height={50} alt="firebase logo" /></Logo>
                                 <Logo classN={`${inView ? "popup-visible w-[70px] md:w-[90px]" : "popup-invisible"}`} txt="azure" pos="top-[180px] left-[40px] md:top-[80px] md:left-[110px] popup-element" ><Image src={azure} width={150} height={50} alt="azure logo" /></Logo>
                                 <Logo classN={`${inView ? "popup-visible w-[70px] md:w-[90px]" : "popup-invisible"}`} txt="expo" pos="top-[275px] left-[150px] md:top-[245px] md:left-[125px] popup-element" ><Image src={expo} width={130} height={50} alt="expo logo" /></Logo>
                                 <Logo classN={`${inView ? "popup-visible w-[80px] md:w-[100px]" : "popup-invisible"}`} txt="git" pos="top-[160px] left-[150px] md:top-[195px] md:left-[270px] popup-element" ><Image src={git} width={120} height={50} alt="git logo" /></Logo>
-                                <Logo classN={`${inView ? "popup-visible w-[70px] md:w-[90px]" : "popup-invisible"}`} txt="prisma" pos="top-[60px] left-[230px] md:top-[80px] md:left-[435px] popup-element" ><Image src={prisma} width={130} height={50} alt="prisma logo" /></Logo>
-                                <Logo classN={`${inView ? "popup-visible w-[60px] md:w-[70px]" : "popup-invisible"}`} txt="power bi" pos="top-[180px] left-[285px] md:top-[250px] md:left-[440px] popup-element" ><Image src={powerbi} width={150} height={50} alt="powerbi logo" /></Logo>
+                                <Logo classN={`${inView ? "popup-visible w-[70px] md:w-[90px]" : "popup-invisible"}`} txt="prisma" pos="top-[60px] left-[210px] md:top-[80px] md:left-[435px] popup-element" ><Image src={prisma} width={130} height={50} alt="prisma logo" /></Logo>
+                                <Logo classN={`${inView ? "popup-visible w-[60px] md:w-[70px]" : "popup-invisible"}`} txt="power bi" pos="top-[180px] left-[260px] md:top-[250px] md:left-[440px] popup-element" ><Image src={powerbi} width={150} height={50} alt="powerbi logo" /></Logo>
                                 </>
                                 :
                                 <>

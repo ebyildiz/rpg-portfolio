@@ -7,7 +7,7 @@ import tilkie from "@/images/companies/tilkie.png"
 
 export default function CareerJourney() {
     return (
-    <section className="flex flex-col place-items-center gap-10 px-10 md:pt-[100px] md:px-20 pb-20">
+    <section className="flex flex-col place-items-center gap-10 px-10 w-[550px] md:w-[1000px] md:pt-[100px] md:px-20 pb-20 hidden">
          <h1 className="text-[40px] underline underline-offset-10 mb-[30px]">Experience</h1>
         <Job picture={tilkie} company="Tilkie Tech" position="Frontend Developer" linePos="right"  description="I developed a mobile application from the ground up using React Native with Expo. implemented BLE provisioning for ESP32 devices using the ESP-IDF provisioning stack. Used Firebase for integrating social authentication." DateBegin="March 2025" DateEnd="Present" />
         <Job picture={sheriff} company="Sheriff's Office Data Division" linePos="left" position="Software Engineer Intern" description="I contributed to the frontend of an AI-powered chatbot web application using React and TypeScript, enabling deputies to query inmate records through an intelligent search interface." DateBegin="Jan 2025" DateEnd="Jun 2025" />

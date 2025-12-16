@@ -4,6 +4,7 @@ import Header from "./Header"
 import { HashProvider } from './HashProvider';
 import DotGrid from './DotGrid';
 import Footer from './Footer';
+import MobileHeader from './MobileHeader';
 
 
 export default function CharacterLayout({ children }:
@@ -29,6 +30,7 @@ export default function CharacterLayout({ children }:
             </div>
             <main className="flex flex-col justify-center align-center pt-20 relative z-0">
                 <Header />
+                <MobileHeader/>
                 <Transition>
                     {children}
                 </Transition>
