@@ -48,19 +48,19 @@ export default function Skills() {
                 {
                     selected === "frontend" ?
                         <>
-                            <Logo classN={`${inView ? "popup-visible w-[100px] md:w-[130px]" : "popup-invisible"}`} txt="html" pos="top-[60px] left-[80] popup-element" ><Image src={html} width={130} height={50} alt="html logo" /></Logo>
+                            <Logo classN={`${inView ? "popup-visible w-[100px] md:w-[130px]" : "popup-invisible"}`} txt="html" pos="top-[50px] left-[60] popup-element" ><Image src={html} width={130} height={50} alt="html logo" /></Logo>
 
-                            <Logo classN={`${inView ? "popup-visible w-[100px] md:w-[130px]" : "popup-invisible"}`} txt="css" pos="top-[40px] left-[200] md:top-[60px] md:left-[420] popup-element" ><Image src={css} width={130} height={50} alt="css logo" /></Logo>
+                            <Logo classN={`${inView ? "popup-visible w-[100px] md:w-[130px]" : "popup-invisible"}`} txt="css" pos="top-[40px] left-[180] md:top-[60px] md:left-[420] popup-element" ><Image src={css} width={130} height={50} alt="css logo" /></Logo>
 
-                            <Logo classN={`${inView ? "popup-visible w-[70px] md:w-[90px]" : "popup-invisible"}`} txt="javascript" pos="top-[170px] left-[50px] md:top-[220px] md:left-[90px] popup-element" ><Image src={javascript} width={90} height={50} alt="javascript logo" /></Logo>
+                            <Logo classN={`${inView ? "popup-visible w-[70px] md:w-[90px]" : "popup-invisible"}`} txt="javascript" pos="top-[170px] left-[40px] md:top-[220px] md:left-[90px] popup-element" ><Image src={javascript} width={90} height={50} alt="javascript logo" /></Logo>
 
-                            <Logo classN={`${inView ? "popup-visible w-[100px] md:w-[120px]" : "popup-invisible"}`} txt="typescript" pos="top-[160px] left-[150px] md:top-[200px] md:left-[245px] popup-element" ><Image src={typescript} width={120} height={100} alt="typescript logo" /></Logo>
+                            <Logo classN={`${inView ? "popup-visible w-[100px] md:w-[120px]" : "popup-invisible"}`} txt="typescript" pos="top-[160px] left-[130px] md:top-[200px] md:left-[245px] popup-element" ><Image src={typescript} width={120} height={100} alt="typescript logo" /></Logo>
 
-                            <Logo classN={`${inView ? "popup-visible w-[100px] md:w-[120px]" : "popup-invisible"}`} txt="react" pos="top-[150px] left-[250] md:top-[40px] md:left-[260] popup-element" ><Image src={react} width={120} height={150} alt="react logo" /></Logo>
+                            <Logo classN={`${inView ? "popup-visible w-[100px] md:w-[120px]" : "popup-invisible"}`} txt="react" pos="top-[150px] left-[230] md:top-[40px] md:left-[260] popup-element" ><Image src={react} width={120} height={150} alt="react logo" /></Logo>
 
-                            <Logo classN={`${inView ? "popup-visible w-[200px] md:w-[250px]" : "popup-invisible"}`} txt="tailwind css" pos="top-[220px] left-[100px] md:top-[280px] md:left-[230px] popup-element" ><Image src={tailwindLight} width={170} height={50} alt="tailwind logo" /></Logo>
+                            <Logo classN={`${inView ? "popup-visible w-[200px] md:w-[250px]" : "popup-invisible"}`} txt="tailwind css" pos="top-[220px] left-[80px] md:top-[280px] md:left-[230px] popup-element" ><Image src={tailwindLight} width={170} height={50} alt="tailwind logo" /></Logo>
 
-                            <Logo classN={`${inView ? "popup-visible w-[100px] md:w-[120px]" : "popup-invisible"}`} txt="next js" pos="top-[325px] left-[140px] md:top-[250px] md:left-[435px] popup-element" ><Image src={nextLight} width={120} height={50} alt="nextLight logo" /></Logo>
+                            <Logo classN={`${inView ? "popup-visible w-[80px] md:w-[120px]" : "popup-invisible"}`} txt="next js" pos="top-[325px] left-[130px] md:top-[250px] md:left-[435px] popup-element" ><Image src={nextLight} width={120} height={50} alt="nextLight logo" /></Logo>
 
                         </>
 
@@ -68,19 +68,19 @@ export default function Skills() {
                         (
                             selected === "technologies" ?
                                 <>
-                                <Logo classN={`${inView ? "popup-visible w-[70px] md:w-[90px]" : "popup-invisible"}`} txt="firebase" pos="top-[50px] left-[80px] md:top-[40px] md:left-[280px] popup-element" ><Image src={firebase} width={130} height={50} alt="firebase logo" /></Logo>
-                                <Logo classN={`${inView ? "popup-visible w-[70px] md:w-[90px]" : "popup-invisible"}`} txt="azure" pos="top-[180px] left-[40px] md:top-[80px] md:left-[110px] popup-element" ><Image src={azure} width={150} height={50} alt="azure logo" /></Logo>
-                                <Logo classN={`${inView ? "popup-visible w-[70px] md:w-[90px]" : "popup-invisible"}`} txt="expo" pos="top-[275px] left-[150px] md:top-[245px] md:left-[125px] popup-element" ><Image src={expo} width={130} height={50} alt="expo logo" /></Logo>
-                                <Logo classN={`${inView ? "popup-visible w-[80px] md:w-[100px]" : "popup-invisible"}`} txt="git" pos="top-[160px] left-[150px] md:top-[195px] md:left-[270px] popup-element" ><Image src={git} width={120} height={50} alt="git logo" /></Logo>
-                                <Logo classN={`${inView ? "popup-visible w-[70px] md:w-[90px]" : "popup-invisible"}`} txt="prisma" pos="top-[60px] left-[210px] md:top-[80px] md:left-[435px] popup-element" ><Image src={prisma} width={130} height={50} alt="prisma logo" /></Logo>
-                                <Logo classN={`${inView ? "popup-visible w-[60px] md:w-[70px]" : "popup-invisible"}`} txt="power bi" pos="top-[180px] left-[260px] md:top-[250px] md:left-[440px] popup-element" ><Image src={powerbi} width={150} height={50} alt="powerbi logo" /></Logo>
+                                <Logo classN={`${inView ? "popup-visible w-[70px] md:w-[90px]" : "popup-invisible"}`} txt="firebase" pos="top-[50px] left-[70px] md:top-[40px] md:left-[280px] popup-element" ><Image src={firebase} width={130} height={50} alt="firebase logo" /></Logo>
+                                <Logo classN={`${inView ? "popup-visible w-[70px] md:w-[90px]" : "popup-invisible"}`} txt="azure" pos="top-[180px] left-[35px] md:top-[80px] md:left-[110px] popup-element" ><Image src={azure} width={150} height={50} alt="azure logo" /></Logo>
+                                <Logo classN={`${inView ? "popup-visible w-[70px] md:w-[90px]" : "popup-invisible"}`} txt="expo" pos="top-[275px] left-[130px] md:top-[245px] md:left-[125px] popup-element" ><Image src={expo} width={130} height={50} alt="expo logo" /></Logo>
+                                <Logo classN={`${inView ? "popup-visible w-[80px] md:w-[100px]" : "popup-invisible"}`} txt="git" pos="top-[160px] left-[140px] md:top-[195px] md:left-[270px] popup-element" ><Image src={git} width={120} height={50} alt="git logo" /></Logo>
+                                <Logo classN={`${inView ? "popup-visible w-[70px] md:w-[90px]" : "popup-invisible"}`} txt="prisma" pos="top-[60px] left-[200px] md:top-[80px] md:left-[435px] popup-element" ><Image src={prisma} width={130} height={50} alt="prisma logo" /></Logo>
+                                <Logo classN={`${inView ? "popup-visible w-[60px] md:w-[70px]" : "popup-invisible"}`} txt="power bi" pos="top-[180px] left-[245px] md:top-[250px] md:left-[440px] popup-element" ><Image src={powerbi} width={150} height={50} alt="powerbi logo" /></Logo>
                                 </>
                                 :
                                 <>
-                                    <Logo classN={`${inView ? "popup-visible w-[120px] md:w-[140px]" : "popup-invisible"}`} txt="node js" pos="top-[160px] left-[220px] md:top-[160px] md:left-[420px] popup-element" ><Image src={node} width={140} height={50} alt="node logo" /></Logo>
+                                    <Logo classN={`${inView ? "popup-visible w-[120px] md:w-[140px]" : "popup-invisible"}`} txt="node js" pos="top-[160px] left-[180px] md:top-[160px] md:left-[420px] popup-element" ><Image src={node} width={140} height={50} alt="node logo" /></Logo>
                                     <Logo classN={`${inView ? "popup-visible w-[95px] md:w-[125px]" : "popup-invisible"}`} txt="cpp" pos="top-[260px] left-[130px] md:top-[50px] md:left-[280px] popup-element" ><Image src={cpp} width={130} height={50} alt="cpp logo" /></Logo>
                                     <Logo classN={`${inView ? "popup-visible w-[75px] md:w-[95px]" : "popup-invisible"}`} txt="java" pos="top-[100px] left-[60px] md:top-[80px] md:left-[90px] popup-element" ><Image src={java} width={130} height={50} alt="java logo" /></Logo>
-                                    <Logo classN={`${inView ? "popup-visible w-[80px] md:w-[105px]" : "popup-invisible"}`} txt="python" pos="top-[70px] left-[190px] md:top-[240px] md:left-[230px] popup-element" ><Image src={python} width={130} height={50} alt="python logo" /></Logo>
+                                    <Logo classN={`${inView ? "popup-visible w-[80px] md:w-[105px]" : "popup-invisible"}`} txt="python" pos="top-[70px] left-[170px] md:top-[240px] md:left-[230px] popup-element" ><Image src={python} width={130} height={50} alt="python logo" /></Logo>
                                 </>
 
                         )

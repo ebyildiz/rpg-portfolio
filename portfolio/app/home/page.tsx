@@ -25,7 +25,7 @@ export default function Home() {
         <div className="flex flex-col justify-center align-center items-center gap-20">
             <Section id='mycharacter' refSection={mycharRef}>
                 <div className="flex flex-col justify-center align-center items-center gap-[-50px]">
-                    <h1 className="text-glow text-center text-[80px] mt-[35px] md:mt-[150px]">
+                    <h1 className="text-glow text-center text-[70px] md:text-[80px] mt-[35px] md:mt-[150px]">
                         ELIF YILDIZ
                     </h1>
 

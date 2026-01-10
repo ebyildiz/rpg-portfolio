@@ -212,6 +212,45 @@ header.is-sticky {
   transform: translateX(15px);
 }
 
+/* ============================= */
+/* Mobile (phones) */
+/* ============================= */
+@media (max-width: 640px) {
+  .gradient-button,
+  .exp-button {
+    padding: 8px 22px;
+    font-size: 25px;
+    border-radius: 22px;
+  }
+
+  .exp-button {
+    background-size: 18px 70%;
+    background-position:
+      -4px 50%,
+      calc(18% - 16px) 50%;
+  }
+}
+
+/* ============================= */
+/* Tablet (iPad-ish) */
+/* ============================= */
+@media (min-width: 641px) and (max-width: 1023px) {
+  .gradient-button,
+  .exp-button {
+    padding: 9px 30px;
+    font-size: 25px;
+    border-radius: 26px;
+  }
+
+  .exp-button {
+    background-size: 22px 75%;
+    background-position:
+      -5px 50%,
+      calc(20% - 18px) 50%;
+  }
+}
+
+
 .text-glow {
   background: linear-gradient(
     90deg,

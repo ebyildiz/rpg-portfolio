@@ -1,52 +1,84 @@
 "use client";
+
 import { useState } from "react";
 import SmoothLink from "./SmoothLink";
 
 export default function MobileHeader() {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [open, setOpen] = useState(false);
 
-    const toggleMenu = () => {
-        setIsMenuOpen((prev) => !prev);
-    };
+  return (
+    <div className="lg:hidden">
+      {/* Top bar */}
+      <div
+        className="
+          fixed top-4 left-1/2 -translate-x-1/2
+          z-50
+          bg-[#0a0a0a]/80 backdrop-blur-md
+          rounded-full
+          px-5 py-3
+          flex items-center justify-between
+          w-[90%] max-w-[360px]
+        "
+      >
+        <div className="w-6 h-6" />
 
-    return (
-        <div className="md:hidden">
-            <header
-                className={`fixed top-0 left-0 w-full z-50 bg-[#0a0a0a]/80 backdrop-blur-md h-[70px] flex items-center px-4`}
-            >
-                <button
-                    onClick={toggleMenu}
-                    className="text-white text-2xl focus:outline-none"
-                    aria-label="Toggle menu"
-                >
-                    {isMenuOpen ? "✖" : "☰"}
-                </button>
-            </header>
+        {/* Hamburger */}
+        <button
+          onClick={() => setOpen(true)}
+          className="flex flex-col gap-[5px]"
+          aria-label="Open menu"
+        >
+          <span className="w-6 h-[2px] bg-white rounded"></span>
+          <span className="w-6 h-[2px] bg-white rounded"></span>
+          <span className="w-6 h-[2px] bg-white rounded"></span>
+        </button>
+      </div>
 
-            {isMenuOpen && (
-                <nav
-                    className={`fixed top-[70px] left-0 w-full bg-[#0a0a0a] text-white flex flex-col items-center gap-4 py-4 z-40`}
-                >
-                    <SmoothLink linkHash="mycharacter" onClick={toggleMenu}>
-                        My Character
-                    </SmoothLink>
-                    <SmoothLink linkHash="skills" onClick={toggleMenu}>
-                        Skills
-                    </SmoothLink>
-                    <SmoothLink linkHash="career" onClick={toggleMenu}>
-                        Experience
-                    </SmoothLink>
-                    <SmoothLink linkHash="certificates" onClick={toggleMenu}>
-                        Certificates
-                    </SmoothLink>
-                    <SmoothLink linkHash="projects" onClick={toggleMenu}>
-                        Project Journey
-                    </SmoothLink>
-                    <SmoothLink linkHash="contactme" onClick={toggleMenu}>
-                        Contact Me
-                    </SmoothLink>
-                </nav>
-            )}
-        </div>
-    );
+      {/* Backdrop */}
+      {open && (
+        <div
+          className="fixed inset-0 bg-black/40 z-40"
+          onClick={() => setOpen(false)}
+        />
+      )}
+
+      {/* Slide-down menu */}
+      <div
+        className={`
+          fixed top-20 left-1/2 -translate-x-1/2
+          z-50
+          w-[90%] max-w-[360px]
+          bg-[#0a0a0a]/90 backdrop-blur-md
+          rounded-2xl
+          px-6 py-6
+          flex flex-col gap-4
+          transition-all duration-300 ease-out
+          ${open
+            ? "opacity-100 translate-y-0"
+            : "opacity-0 -translate-y-4 pointer-events-none"}
+        `}
+      >
+        {[
+          ["mycharacter", "My Character"],
+          ["skills", "Skills"],
+          ["career", "Experience"],
+          ["certificates", "Certificates"],
+          ["projects", "Project Journey"],
+          ["contactme", "Contact Me"],
+        ].map(([hash, label]) => (
+          <div
+            key={hash}
+            onClick={() => setOpen(false)}
+            className="text-left"
+          >
+            <SmoothLink linkHash={hash}>
+              <span className="text-white text-[18px]">
+                {label}
+              </span>
+            </SmoothLink>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 }
